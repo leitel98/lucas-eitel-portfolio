@@ -16,18 +16,18 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        electric: {
-          50: '#fbf4ff',
-          100: '#f7e9fe',
-          200: '#eed2fc',
-          300: '#e3aef9',
-          400: '#d47df5',
-          500: '#bf4ce9',
-          600: '#a22bca',
-          700: '#8b21aa',
-          800: '#731d8b',
-          900: '#611d72',
-          950: '#3e064c',
+        royal: {
+          50: '#fbf6fe',
+          100: '#f5eafd',
+          200: '#edd9fb',
+          300: '#dfbbf7',
+          400: '#cb90f0',
+          500: '#b765e7',
+          600: '#a246d7',
+          700: '#8330b0',
+          800: '#762f9a',
+          900: '#61277c',
+          950: '#43105b',
         },
         lemon: {
           50: '#fafcea',
@@ -42,7 +42,6 @@ const config: Config = {
           900: '#67521c',
           950: '#3c2c0c',
         },
-
       },
     },
     fontFamily: {
@@ -51,4 +50,6 @@ const config: Config = {
   },
   plugins: [nextui()],
 };
+
+// Export the Tailwind CSS configuration
 export default config;

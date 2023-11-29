@@ -1,5 +1,7 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import type { Metadata } from 'next';
 import { Rosario } from 'next/font/google';
+import { Footer, NavBar } from '@/components';
 import Providers from './providers';
 import './globals.css';
 
@@ -21,7 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={rosario.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <NavBar />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
