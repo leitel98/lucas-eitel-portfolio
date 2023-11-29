@@ -7,5 +7,5 @@
 }
 
 body {
-  @apply bg-gradient-to-b from-royal-600 to-lemon-300
+  @apply bg-gradient-to-b from-royal-900 to-royal-500
 }

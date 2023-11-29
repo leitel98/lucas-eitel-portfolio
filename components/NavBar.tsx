@@ -20,7 +20,7 @@ function NavBar() {
               <Tab
                 key={tab}
                 className={({ selected }) => classNames(
-                  'w-full rounded-lg py-2.5 text-sm font-semibold leading-5 whitespace-nowrap',
+                  'w-full rounded-lg py-2.5 font-semibold leading-5 whitespace-nowrap',
                   'focus:outline-none',
                   selected
                     ? 'bg-gradient-to-br from-royal-400 to-royal-600 shadow-sm text-royal-950'
