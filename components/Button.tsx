@@ -1,8 +1,9 @@
-import React, { FC, ReactNode } from 'react';
+'use client';
 
-interface ButtonI {
+import React, { ButtonHTMLAttributes, FC, ReactNode } from 'react';
+
+interface ButtonI extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  buttonType?: JSX.IntrinsicElements['button']['type'];
   variant?: 'gradient' | 'border';
   disabled?: boolean;
   size?: 'big' | 'normal'
@@ -10,7 +11,6 @@ interface ButtonI {
 
 const Button: FC<ButtonI> = ({
   children,
-  buttonType,
   variant,
   disabled,
   size,
@@ -22,7 +22,7 @@ const Button: FC<ButtonI> = ({
   } ${size === 'big' && 'text-lg font-semibold'}`;
 
   return (
-    <button type={buttonType} className={buttonClassName} disabled={disabled}>
+    <button className={buttonClassName} disabled={disabled}>
       {children}
     </button>
   );
@@ -31,7 +31,6 @@ const Button: FC<ButtonI> = ({
 Button.defaultProps = {
   variant: 'gradient',
   disabled: false,
-  buttonType: 'button',
   size: 'normal',
 };
 
