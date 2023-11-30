@@ -16,7 +16,7 @@ function NavBar() {
       <Tab.Group>
         <Tab.List className="flex w-1/2 space-x-1 rounded-xl bg-royal-950/30 p-1">
           {NAV_TABS.map((tab) => (
-            <Link href="/" className="flex w-full">
+            <Link href={`#${tab}`} className="flex w-full">
               <Tab
                 key={tab}
                 className={({ selected }) => classNames(

@@ -1,10 +1,18 @@
+'use client';
+
 import { Button } from '@/components';
+import {
+  GraphQlIcon, NodeIcon, ReactIcon, TsIcon,
+} from '@/icons';
 import Image from 'next/image';
 
 export default function Home() {
   return (
     <main className="flex w-full items-center justify-start min-h-screen flex-col gap-10">
-      <article id="Home" className="max-w-7xl flex w-full justify-evenly px-10">
+      <article
+        id="Home"
+        className="max-w-7xl flex w-full justify-evenly px-10 relative"
+      >
         <Image
           src="/images/main-pic.png"
           alt="Main Image"
@@ -22,10 +30,19 @@ export default function Home() {
           <h1 className="text-7xl font-bold text-royal-100">
             <span className="text-royal-950">Full Stack</span>
             {' '}
-            software developer!
+            software
+            developer!
           </h1>
+          <div className="flex items-center w-full justify-between">
+            <TsIcon />
+            <ReactIcon />
+            <NodeIcon />
+            <GraphQlIcon />
+          </div>
           <div className="flex w-full items-center justify-center">
-            <Button size="big">Download cv</Button>
+            <a href="../public/Lucas-Eitel-Resume[EN].pdf" download>
+              <Button size="big">Download cv</Button>
+            </a>
           </div>
         </section>
       </article>

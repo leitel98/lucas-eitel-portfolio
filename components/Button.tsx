@@ -11,9 +11,10 @@ interface ButtonI extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button: FC<ButtonI> = ({
   children,
-  variant,
+  variant = 'gradient',
   disabled,
-  size,
+  size = 'normal',
+  onClick,
 }) => {
   const buttonClassName = `px-8 py-4 rounded-full shadow-sm transition-all duration-50 hover:scale-105 ${
     variant === 'gradient'
@@ -22,16 +23,10 @@ const Button: FC<ButtonI> = ({
   } ${size === 'big' && 'text-lg font-semibold'}`;
 
   return (
-    <button className={buttonClassName} disabled={disabled}>
+    <button className={buttonClassName} disabled={disabled} onClick={onClick}>
       {children}
     </button>
   );
-};
-
-Button.defaultProps = {
-  variant: 'gradient',
-  disabled: false,
-  size: 'normal',
 };
 
 export default Button;
